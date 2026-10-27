@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wise Edge | Professional Language & Content Services</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A2947',
+              beige: '#F3E4C9',
+              sage: '#D3D4C0',
+              brown: '#8B5E3C',
+              dark: '#061a2e',
+              lightBg: '#FAF7F2'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF7F2;
+      color: #0A2947;
+    }
+    .portfolio-tab.active {
+      background-color: #0A2947;
+      color: #F3E4C9;
+      border-color: #0A2947;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#F3E4C9] selection:text-[#0A2947] flex flex-col min-h-screen">
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header class="sticky top-0 z-40 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#D3D4C0]/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-lg bg-[#F3E4C9] p-1 border border-[#8B5E3C]/30 flex items-center justify-center overflow-hidden shadow-sm">
+            <img src="unnamed_2.jpg" alt="Wise Edge Logo" class="w-full h-full object-cover rounded">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#0A2947] leading-none">Wise Edge</span>
+            <span class="text-[10px] uppercase tracking-widest text-[#8B5E3C] font-semibold mt-1">International Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide text-[#0A2947]">
+          <a href="#home" class="hover:text-[#8B5E3C] transition-colors">Home</a>
+          <a href="#services" class="hover:text-[#8B5E3C] transition-colors">Services</a>
+          <a href="#portfolio" class="hover:text-[#8B5E3C] transition-colors">Portfolio</a>
+          <a href="#why-us" class="hover:text-[#8B5E3C] transition-colors">About</a>
+          <a href="#contact" class="hover:text-[#8B5E3C] transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden sm:flex items-center">
+          <a href="#contact" class="px-5 py-2.5 rounded-full bg-[#0A2947] text-[#F3E4C9] text-sm font-medium hover:bg-[#8B5E3C] transition-all shadow-sm">
+            Request a Quote
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-[#0A2947] hover:text-[#8B5E3C] focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#FAF7F2] border-b border-[#D3D4C0] px-4 pt-2 pb-6 space-y-3">
+      <a href="#home" class="block py-2 text-[#0A2947] font-medium hover:text-[#8B5E3C]">Home</a>
+      <a href="#services" class="block py-2 text-[#0A2947] font-medium hover:text-[#8B5E3C]">Services</a>
+      <a href="#portfolio" class="block py-2 text-[#0A2947] font-medium hover:text-[#8B5E3C]">Portfolio</a>
+      <a href="#why-us" class="block py-2 text-[#0A2947] font-medium hover:text-[#8B5E3C]">About</a>
+      <a href="#contact" class="block py-2 text-[#0A2947] font-medium hover:text-[#8B5E3C]">Contact</a>
+      <a href="#contact" class="inline-block mt-2 w-full text-center px-5 py-2.5 rounded-full bg-[#8B5E3C] text-white font-medium">Request a Quote</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="relative py-16 lg:py-24 overflow-hidden border-b border-[#D3D4C0]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3E4C9] text-[#8B5E3C] text-xs font-semibold uppercase tracking-wider border border-[#8B5E3C]/20">
+              <i class="fa-solid fa-feather-pointed"></i> Editorial Language Solutions
+            </span>
+            
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#0A2947]">
+              Words That Connect. <br>
+              <span class="italic font-normal text-[#8B5E3C]">Content That Resonates.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#0A2947]/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Professional translation, content writing, video subtitling, and proofreading services that preserve meaning, respect cultural context, and help your message reach the right audience.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#portfolio" class="px-7 py-3.5 rounded-full bg-[#0A2947] text-[#F3E4C9] font-medium hover:bg-[#8B5E3C] transition-all text-center">
+                View Sample Work
+              </a>
+              <a href="#contact" class="px-7 py-3.5 rounded-full border border-[#0A2947] text-[#0A2947] font-medium hover:bg-[#F3E4C9] transition-all text-center">
+                Request a Quote
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Brand Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md bg-white p-8 rounded-2xl border border-[#D3D4C0] shadow-xl text-center">
+              <div class="w-32 h-32 mx-auto mb-6 bg-[#F3E4C9]/50 rounded-full p-2 border border-[#8B5E3C]/30 flex items-center justify-center">
+                <img src="unnamed_2.jpg" alt="Wise Edge Emblem" class="w-full h-full object-cover rounded-full">
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#0A2947]">Wise Edge</h3>
+              <p class="text-xs uppercase tracking-widest text-[#8B5E3C] font-semibold mt-1">International Services</p>
+              <p class="text-sm text-[#0A2947]/70 italic mt-4">“Precision in language, clarity in message, impact across cultures.”</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="py-20 border-b border-[#D3D4C0]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-[#8B5E3C] font-bold">What We Offer</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0A2947]">Professional Language Solutions</h2>
+          <p class="text-sm sm:text-base text-[#0A2947]/70">Tailored linguistic services for businesses, creators, and organizations worldwide.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div class="bg-white rounded-2xl p-8 border border-[#D3D4C0] hover:shadow-lg transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-[#F3E4C9] flex items-center justify-center text-[#8B5E3C] text-xl">
+                <i class="fa-solid fa-language"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#0A2947]">Arabic-English Translation</h3>
+              <p class="text-sm text-[#0A2947]/70 leading-relaxed">
+                Bi-directional translation services between Arabic and English across business, financial, legal, IT/software, and educational domains.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D3D4C0]/50">
+              <a href="#portfolio" onclick="switchTab('translation')" class="inline-flex items-center gap-2 text-sm font-semibold text-[#8B5E3C] hover:text-[#0A2947]">
+                See Samples <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border border-[#D3D4C0] hover:shadow-lg transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-[#F3E4C9] flex items-center justify-center text-[#8B5E3C] text-xl">
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#0A2947]">Content Writing & SEO</h3>
+              <p class="text-sm text-[#0A2947]/70 leading-relaxed">
+                Engaging, SEO-optimized blog posts, website content, and editorial articles structured to perform on search engines and convert readers.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D3D4C0]/50">
+              <a href="#portfolio" onclick="switchTab('writing')" class="inline-flex items-center gap-2 text-sm font-semibold text-[#8B5E3C] hover:text-[#0A2947]">
+                See Samples <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border border-[#D3D4C0] hover:shadow-lg transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-[#F3E4C9] flex items-center justify-center text-[#8B5E3C] text-xl">
+                <i class="fa-solid fa-closed-captioning"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#0A2947]">Video Translation & Subtitling</h3>
+              <p class="text-sm text-[#0A2947]/70 leading-relaxed">
+                Precise timestamping, line splitting, and translation for videos, TED Talks, promotional clips, and children's media using Subtitle Edit.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D3D4C0]/50">
+              <a href="#portfolio" onclick="switchTab('subtitling')" class="inline-flex items-center gap-2 text-sm font-semibold text-[#8B5E3C] hover:text-[#0A2947]">
+                See Samples <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border border-[#D3D4C0] hover:shadow-lg transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-[#F3E4C9] flex items-center justify-center text-[#8B5E3C] text-xl">
+                <i class="fa-solid fa-check-double"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#0A2947]">Proofreading & Editing</h3>
+              <p class="text-sm text-[#0A2947]/70 leading-relaxed">
+                Detailed Track-Changes review for English & Arabic texts to fix grammar, style, spelling, punctuation, and structural flow.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#D3D4C0]/50">
+              <a href="#portfolio" onclick="switchTab('editing')" class="inline-flex items-center gap-2 text-sm font-semibold text-[#8B5E3C] hover:text-[#0A2947]">
+                See Samples <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO SECTION ================= -->
+    <section id="portfolio" class="py-20 bg-[#F3E4C9]/20 border-b border-[#D3D4C0]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-[#8B5E3C] font-bold">Our Work</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0A2947]">Featured Portfolio & Case Studies</h2>
+          <p class="text-sm text-[#0A2947]/70">Explore actual project samples across our translation, content writing, subtitling, and editing domains.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+          <button onclick="switchTab('translation')" id="btn-translation" class="portfolio-tab active px-5 py-2.5 rounded-full border border-[#D3D4C0] bg-white text-xs sm:text-sm font-semibold transition-all">
+            <i class="fa-solid fa-language mr-1.5"></i> Translation
+          </button>
+          <button onclick="switchTab('subtitling')" id="btn-subtitling" class="portfolio-tab px-5 py-2.5 rounded-full border border-[#D3D4C0] bg-white text-xs sm:text-sm font-semibold transition-all">
+            <i class="fa-solid fa-film mr-1.5"></i> Subtitling
+          </button>
+          <button onclick="switchTab('writing')" id="btn-writing" class="portfolio-tab px-5 py-2.5 rounded-full border border-[#D3D4C0] bg-white text-xs sm:text-sm font-semibold transition-all">
+            <i class="fa-solid fa-pen-nib mr-1.5"></i> Content Writing & SEO
+          </button>
+          <button onclick="switchTab('editing')" id="btn-editing" class="portfolio-tab px-5 py-2.5 rounded-full border border-[#D3D4C0] bg-white text-xs sm:text-sm font-semibold transition-all">
+            <i class="fa-solid fa-spell-check mr-1.5"></i> Proofreading
+          </button>
+        </div>
+
+        <!-- Portfolio Content Display -->
+        <div id="portfolio-container" class="space-y-8">
+          
+          <!-- Category 1: Translation -->
+          <div id="tab-translation" class="portfolio-category grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">Financial & Business Translation</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Pro Forma Income Statement</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">Fancy's Foods LLC Business Plan</h3>
+              <p class="text-sm text-[#0A2947]/70">Accurate English to Arabic translation of financial balance sheets, operating expenses, sales projections, and corporate financial notes.</p>
+              <div class="bg-[#FAF7F2] p-4 rounded-lg text-xs space-y-2 border border-[#D3D4C0]/50 font-mono">
+                <p class="text-[#8B5E3C] font-semibold">EN: "Pro Forma Income Statement - Net Sales: $240,450.00 | Net Income After Taxes: $15,085.00"</p>
+                <p class="text-[#0A2947] font-semibold">AR: "شركة فانسيز فودز ذ.م.م - البيان الدخل المتوقع - صافي المبيعات: 240,450.00 دولار | الدخل الصافي بعد الضرائب: 15,085.00 دولار"</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">Software & UI Localization</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">App Strings & System UI</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">User Interface & Web Platform Localization</h3>
+              <p class="text-sm text-[#0A2947]/70">Localization of dynamic web/app variables, system forms, live chat statuses, and error messages respecting technical constraints.</p>
+              <div class="bg-[#FAF7F2] p-4 rounded-lg text-xs space-y-2 border border-[#D3D4C0]/50 font-mono">
+                <p class="text-[#8B5E3C] font-semibold">EN: "New passwords are required to be a minimum of {0} characters in length."</p>
+                <p class="text-[#0A2947] font-semibold">AR: "يتطلب تواجد كلمات المرور الجديدة أن تكون بطول {0} حرفاً على الأقل."</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4 md:col-span-2">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">General & Educational Translation</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Article & Essay Translation</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">Articles on Psychology, Business & Language Learning</h3>
+              <p class="text-sm text-[#0A2947]/70">Fluid, culturally authentic translations for articles covering Hypnotism, Side Hustles, Multitasking Skills, and Freelancing growth.</p>
+            </div>
+          </div>
+
+          <!-- Category 2: Subtitling -->
+          <div id="tab-subtitling" class="portfolio-category hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">TEDx Talks & Speeches</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Subtitle Edit & Timestamping</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">TEDx Speech: Exercise on Gratitude</h3>
+              <p class="text-sm text-[#0A2947]/70">Complete audio transcription, translation, line length management (chars/sec), and frame-accurate timing synchronization using Subtitle Edit software.</p>
+              <div class="bg-[#0A2947] text-[#F3E4C9] p-4 rounded-lg text-xs space-y-2 font-mono">
+                <p class="text-[#D3D4C0]">00:01:00.583 --> 00:01:02.530</p>
+                <p class="text-white font-bold">إنها حالة الشكر | It's a state of gratitude.</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">Animation & Children's Media</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Magicbox Stories</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">A Friendly Frog - Kids Animated Stories</h3>
+              <p class="text-sm text-[#0A2947]/70">Subtitling and translating animated children's video content, adapting dialogue to be engaging, clear, and age-appropriate for Arabic audiences.</p>
+              <div class="bg-[#0A2947] text-[#F3E4C9] p-4 rounded-lg text-xs space-y-2 font-mono">
+                <p class="text-[#D3D4C0]">00:00:13.016 --> 00:00:15.071</p>
+                <p class="text-white font-bold">ذات مرة كان أرنب وسنجاب...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Content Writing & SEO -->
+          <div id="tab-writing" class="portfolio-category hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">WordPress & Yoast SEO</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Meta & Slug Optimization</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">خدمات الترجمة وكتابة المحتوى (ArbSlide)</h3>
+              <p class="text-sm text-[#0A2947]/70">Writing SEO-optimized articles with green Yoast SEO scores, focused keyphrases, custom meta descriptions, and clean URL slugs.</p>
+              <div class="bg-[#FAF7F2] p-4 rounded-lg text-xs border border-[#D3D4C0]/50 space-y-1">
+                <span class="inline-block text-[10px] font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">● SEO Analysis: Good</span>
+                <p class="font-medium text-[#0A2947]">Meta: "تعرف على أهمية خدمات الترجمة وكتابة المحتوى لأعمالك..."</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">Editorial Blog Writing</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Tech & Lifestyle Articles</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">مقالات خبايا الترجمة الآلية، العناية بالبشرة، والعطور</h3>
+              <p class="text-sm text-[#0A2947]/70">Rich, engaging Arabic articles covering complex technological topics (Machine Translation limits) to lifestyle articles (Skincare & Perfume notes).</p>
+            </div>
+          </div>
+
+          <!-- Category 4: Proofreading -->
+          <div id="tab-editing" class="portfolio-category hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">Arabic Proofreading (مراجعة لغوية)</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">MS Word Track Changes</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">تدقيق ومراجعة نصوص ومقالات عربية</h3>
+              <p class="text-sm text-[#0A2947]/70">Comprehensive Arabic linguistic editing: correcting hamzas, taa marbuta/mabsuta, removing redundant spaces, and refining rhetorical style.</p>
+              <div class="bg-[#FAF7F2] p-4 rounded-lg text-xs space-y-1.5 border border-[#D3D4C0]/50">
+                <p class="text-red-600 line-through">استوقفنى اليوم مشهد طفلين لم يتجاوز عمرهم الست سنوات على أبعد تقدير</p>
+                <p class="text-green-700 font-semibold">استوقفني اليوم مشهد طفلين لم يتجاوز عمرهما الست سنوات على أبعد تقدير</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-[#D3D4C0] shadow-sm space-y-4">
+              <div class="flex items-center justify-between border-b border-[#D3D4C0]/40 pb-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-[#8B5E3C]">English Academic Editing</span>
+                <span class="text-xs px-2.5 py-1 rounded bg-[#F3E4C9] text-[#0A2947] font-medium">Harvard Theory of Intelligence</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#0A2947]">English Grammar & Syntax Revision</h3>
+              <p class="text-sm text-[#0A2947]/70">Line editing for English academic texts: fixing subject-verb agreement, article placement, punctuation, and eliminating redundancy.</p>
+              <div class="bg-[#FAF7F2] p-4 rounded-lg text-xs space-y-1.5 border border-[#D3D4C0]/50">
+                <p class="text-red-600 line-through">"The difference between traditional education... that can be detailed as follows:"</p>
+                <p class="text-green-700 font-semibold">"The differences between traditional and distance education can be summarized as follows:"</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section id="why-us" class="py-20 border-b border-[#D3D4C0]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-[#8B5E3C] font-bold">Why Choose Wise Edge</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0A2947]">Meaning-First Communication</h2>
+            <p class="text-sm sm:text-base text-[#0A2947]/80 leading-relaxed">
+              We go beyond literal translation. We focus on preserving the true essence of your message while adapting it seamlessly to cultural norms and audience expectations.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl border border-[#D3D4C0]">
+              <h4 class="font-serif font-bold text-lg text-[#0A2947] mb-2">Cultural Sensitivity</h4>
+              <p class="text-sm text-[#0A2947]/70">Respecting local contexts, idiomatic nuance, and cultural background in every word.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-[#D3D4C0]">
+              <h4 class="font-serif font-bold text-lg text-[#0A2947] mb-2">Natural Flow</h4>
+              <p class="text-sm text-[#0A2947]/70">Crafting content that feels natively written rather than mechanically translated.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-[#D3D4C0]">
+              <h4 class="font-serif font-bold text-lg text-[#0A2947] mb-2">Thorough Quality Control</h4>
+              <p class="text-sm text-[#0A2947]/70">Careful multi-step review processes to prevent errors and ensure perfection.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-[#D3D4C0]">
+              <h4 class="font-serif font-bold text-lg text-[#0A2947] mb-2">Clear Timelines</h4>
+              <p class="text-sm text-[#0A2947]/70">Reliable project management ensuring your deadlines are consistently met.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="py-20 bg-[#0A2947] text-[#F3E4C9] text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight">Let’s Make Every Word Count.</h2>
+        <p class="text-base sm:text-lg text-[#F3E4C9]/80 max-w-xl mx-auto">
+          Ready to elevate your communication? Get in touch today for a customized quote tailored to your project.
+        </p>
+        <div class="pt-4">
+          <a href="#contact" class="inline-block px-8 py-4 rounded-full bg-[#8B5E3C] text-white font-medium hover:bg-[#F3E4C9] hover:text-[#0A2947] transition-all">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs uppercase tracking-widest text-[#8B5E3C] font-bold">Get In Touch</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0A2947]">Start Your Project With Wise Edge</h2>
+            <p class="text-sm text-[#0A2947]/70 leading-relaxed">
+              Have questions or need a fast turnaround? Reach out via email or direct message.
+            </p>
+
+            <div class="space-y-4 pt-4">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-[#F3E4C9] flex items-center justify-center text-[#8B5E3C]">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="block text-xs text-[#0A2947]/60">Email Us</span>
+                  <a href="mailto:emanwasimm7@gmail.com" class="text-sm font-semibold text-[#0A2947] hover:text-[#8B5E3C]">emanwasimm7@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-[#F3E4C9] flex items-center justify-center text-[#8B5E3C]">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span class="block text-xs text-[#0A2947]/60">Phone / WhatsApp</span>
+                  <a href="https://wa.me/970566247577" target="_blank" class="text-sm font-semibold text-[#0A2947] hover:text-[#8B5E3C]">+970 566 247 577</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7 bg-[#FAF7F2] p-8 rounded-2xl border border-[#D3D4C0]">
+            <form onsubmit="alert('Thank you! Your quote request has been received.'); return false;" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-[#0A2947] mb-1">Your Name</label>
+                  <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-[#D3D4C0] bg-white text-sm focus:outline-none focus:border-[#8B5E3C]">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#0A2947] mb-1">Your Email</label>
+                  <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-lg border border-[#D3D4C0] bg-white text-sm focus:outline-none focus:border-[#8B5E3C]">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-[#0A2947] mb-1">Service Required</label>
+                <select class="w-full px-4 py-3 rounded-lg border border-[#D3D4C0] bg-white text-sm focus:outline-none focus:border-[#8B5E3C]">
+                  <option>Arabic-English Translation</option>
+                  <option>Content Writing & SEO</option>
+                  <option>Video Translation & Subtitling</option>
+                  <option>Proofreading & Editing</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-[#0A2947] mb-1">Project Details</label>
+                <textarea rows="4" required placeholder="Tell us about word count, timeline, or specific requirements..." class="w-full px-4 py-3 rounded-lg border border-[#D3D4C0] bg-white text-sm focus:outline-none focus:border-[#8B5E3C]"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-lg bg-[#0A2947] text-[#F3E4C9] font-medium hover:bg-[#8B5E3C] transition-all">
+                Send Quote Request
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#0A2947] text-[#F3E4C9] py-12 border-t border-[#8B5E3C]/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#F3E4C9] p-1 flex items-center justify-center overflow-hidden">
+            <img src="unnamed_2.jpg" alt="Wise Edge Logo" class="w-full h-full object-cover rounded">
+          </div>
+          <span class="font-serif text-xl font-bold">Wise Edge</span>
+        </div>
+
+        <p class="text-xs text-[#F3E4C9]/60 text-center">
+          &copy; 2026 Wise Edge International Services. All rights reserved.
+        </p>
+
+        <div class="flex gap-4 text-xs text-[#F3E4C9]/80">
+          <a href="mailto:emanwasimm7@gmail.com" class="hover:underline">emanwasimm7@gmail.com</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Green WhatsApp Button -->
+  <a href="https://wa.me/970566247577" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function switchTab(category) {
+      document.querySelectorAll('.portfolio-category').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.portfolio-tab').forEach(el => el.classList.remove('active'));
+
+      const targetTab = document.getElementById('tab-' + category);
+      const targetBtn = document.getElementById('btn-' + category);
+
+      if (targetTab && targetBtn) {
+        targetTab.classList.remove('hidden');
+        targetBtn.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
